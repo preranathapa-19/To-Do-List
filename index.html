@@ -9,24 +9,35 @@
 
   <body>
     <section
-      class="min-h-screen bg-gradient-to-r from-[#153677] to-[#4E085F] flex items-center justify-center"
+      class="min-h-screen bg-gradient-to-r from-pink-300 to-pink-800 flex items-center justify-center"
     >
       <div class="bg-white h-[200px] w-[380px] rounded">
-        <h2 class="text-xl font-bold text-blue-800 pl-8 pt-4">To-Do-List <img src="images/images/icon.png" class="w-6 h-6 inline-block" /> </h2>
-       <div>
-         <input
-          type="text"
-          placeholder="Add your task"
-          class="px-10 py-2 bg-gray-200 rounded m-3"
-        />
-        <button
-          class="text-white bg-orange-600 rounded-xl px-5 py-2 font-semibold"
+        <h2 class="text-xl font-bold text-pink-700 pl-8 pt-4">
+          To-Do-List
+          <img src="images/images/icon.png" class="w-6 h-6 inline-block" />
+        </h2>
+        <div
+          class="flex items-center bg-[#edeef0] rounded-full mt-5 "
         >
-          Add
-        </button>
-       </div>
+          <input
+            type="text"
+            placeholder="Add your task"
+            class="flex-1 px-6 py-4 bg-transparent placeholder:text-gray-400 "
+          />
+
+          <button
+            class="bg-pink-600 text-white px-8 py-4 font-semibold rounded-full"
+          >
+            Add
+          </button>
+        </div>
+            <ul class="pl-4">
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
       </div>
-    </section>
+    </section> 
 
     <script src="script.js"></script>
   </body>
