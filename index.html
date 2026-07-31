@@ -1,44 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <section
-      class="min-h-screen bg-gradient-to-r from-pink-300 to-pink-800 flex items-center justify-center"
-    >
-      <div class="bg-white h-[200px] w-[380px] rounded">
-        <h2 class="text-xl font-bold text-pink-700 pl-8 pt-4">
-          To-Do-List
-          <img src="images/images/icon.png" class="w-6 h-6 inline-block" />
-        </h2>
-        <div
-          class="flex items-center bg-[#edeef0] rounded-full mt-5 "
-        >
-          <input
-            type="text"
-            placeholder="Add your task"
-            class="flex-1 px-6 py-4 bg-transparent placeholder:text-gray-400 "
-          />
+        class="min-h-screen bg-gradient-to-r from-pink-300 to-pink-800 flex items-center justify-center">
 
-          <button
-            class="bg-pink-600 text-white px-8 py-4 font-semibold rounded-full"
-          >
-            Add
-          </button>
-        </div>
-            <ul class="pl-4">
+        <div class="bg-white w-[380px] rounded p-6">
+
+            <h2 class="text-xl font-bold text-pink-700">
+                To-Do-List
+                <img src="images/images/icon.png" class="w-6 h-6 inline-block" />
+            </h2>
+
+            <div class="flex items-center bg-[#edeef0] rounded-full mt-5">
+
+                <input
+                    id="input-box"
+                    type="text"
+                    placeholder="Add your task"
+                    class="flex-1 px-6 py-4 bg-transparent placeholder:text-gray-400 outline-none"
+                />
+
+                <button
+                    onclick="addTask()"
+                    class="bg-pink-600 text-white px-8 py-4 font-semibold rounded-full">
+                    Add
+                </button>
+
+            </div>
+
+            
+            <ul id="list-container" class="pl-2 mt-5">
+
+                <!-- Remove these sample tasks -->
+                <!--
                 <li>Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li>
+                -->
+
             </ul>
-      </div>
-    </section> 
+
+        </div>
+
+    </section>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

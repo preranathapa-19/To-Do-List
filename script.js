@@ -1,21 +1,29 @@
-// //Seclect Dom Elements
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
 
-// const input = document.getElementById('todo-input')
-// const addBtn = document.getElementById('add-btn')
-// const list = document.getElementById('todo-list')
+function addTask() {
+    if (inputBox.value === "") {
+        alert("You must write something!");
+    } else {
 
-// // Try to load saved todas from localstorage (if any)
-// const saved = localStorage.getItem('todas');
-// const todas = saved? JSON.parse(saved) : [];
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
 
-// function saveTodos(){
-//     //save current todos array to localstorage
-//     localStorage.setItem('todos', JSON.stringify(todas));
-// }
+        li.className =
+            "flex justify-between items-center bg-pink-100 px-4 py-2 rounded-lg mt-2 cursor-pointer";
 
-// //create a dom node for a todo object and append it to the list 
-// function 
+        listContainer.appendChild(li);
 
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        span.className =
+            "text-red-600 text-xl font-bold cursor-pointer";
 
+        li.appendChild(span);
 
+        inputBox.value = "";
+
+        saveData();
+    }
+}
 
